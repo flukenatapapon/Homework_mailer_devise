@@ -1,0 +1,15 @@
+<h1>Send Landing Mail</h1>
+<% if user_signed_in? %>
+    <form action="/send_mail" method="post">
+      <label>Email :: </label>
+      <input type="text" name="email" id="email"><br><br>
+      <label>Message :: </label>
+      <textarea name="message" id="message">
+      </textarea><br><br>
+      <button type="submit">send mail</button>
+    </form>
+<% else %>
+   <br>
+     <p>กรุณาเข้าสู่ระบบ</p>
+     <%= link_to('เข้าสู่ระบบ', new_user_session_path) %>
+<% end %>

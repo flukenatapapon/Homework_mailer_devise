@@ -1,0 +1,8 @@
+<br>
+<br>
+<% if user_signed_in? %>
+  <%= link_to('Go to profile', goToProfile_path, method: :get) %> 
+  <%= link_to('Edit', edit_user_info_path(current_user)) %> 
+  <%= current_user.email %>
+  <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
+<% end %>

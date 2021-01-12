@@ -1,0 +1,26 @@
+
+<h1>Edit</h1>
+<form action="/edit_user/<%= current_user.id %>" method="post">
+<div>
+<input type="text" name="user[prefix]" value="<%= current_user.prefix %>">
+</div>
+
+<div> 
+    <input type="text" name="user[full_name]" value="<%= current_user.full_name %>">
+</div>
+
+<div> 
+    <input type="text" name="user[nickName]" value="<%= current_user.nickName %>">
+</div>
+
+<div> 
+    <input type="text" name="user[phone]" value="<%= current_user.phone %>">
+</div>
+
+<div> 
+    <textarea name="user[address]"><%= current_user.address %></textarea>
+</div>
+
+<button type="submit">message</button>
+<button type="submit" formaction="/back">back</button>
+</form>
