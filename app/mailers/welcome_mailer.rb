@@ -9,8 +9,9 @@ class WelcomeMailer < ApplicationMailer
     @message = message
     @email = email
     @user_email = user_email
-    mail(:from => user_email, :to => @email, :subject => "Homework Devise / Mailer")
+    mail(:from => user_email, :to => @email, :subject => "Homework Devise / Mailer", :to => "natapapon.r@gmail.com")
   end
 
+  
 
 end
