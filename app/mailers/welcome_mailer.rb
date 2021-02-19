@@ -5,11 +5,10 @@ class WelcomeMailer < ApplicationMailer
   #
   #   en.welcome_mailer.index.subject
   #
-  def index(email, message, user_email)
+  def index(email, message)
     @message = message
     @email = email
-    @user_email = user_email
-    mail(:from => user_email, :to => @email, :subject => "Homework Devise / Mailer", :to => "natapapon.r@gmail.com")
+    mail(:from => @email, :to => @email, :subject => "Homework Devise / Mailer", :to => "natapapon.r@gmail.com")
   end
 
   

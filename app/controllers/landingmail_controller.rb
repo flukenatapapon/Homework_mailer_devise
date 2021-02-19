@@ -17,7 +17,7 @@ class LandingmailController < ApplicationController
 
     def send_mail
         puts "before pass"
-        WelcomeMailer.index(params[:email], params[:message], current_user.email).deliver
+        WelcomeMailer.index(params[:email], params[:message]).deliver
 
         @ip_address = request.remote_ip
         puts @ip_address

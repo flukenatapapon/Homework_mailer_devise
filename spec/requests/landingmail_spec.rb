@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe "Landingmail", type: :request do
 
     let(:landingmail_params) {
-        { email: "natapapon.r@gmail.com", message: "This is a test mail" }
+        { email: "natapapon.r@gmail.com", message: "This is a test mails" }
     } 
 
     describe "POST /send_mail" do
